@@ -175,29 +175,24 @@ University of Memphis
 
 - Input format:
 ```
-x1 y1    # coordinate 1
-x2 y2    # coordinate 2
-x3 y3    # coordinate 3
-...      # etc
+T                       # number of test cases
+x1 y1 x2 y2 x3 y3 ...   # test case 1
+x1 y1 x2 y2 x3 y3 ...   # test case 2
+...                     # etc
 ```
 - Output format:
 ```
-x1 y1    # coordinate 1
-x2 y2    # coordinate 2
-x3 y3    # coordinate 3
+x1 y1 x2 y2 x3 y3 ...   # list of coordinates for test case 1
+x1 y1 x2 y2 x3 y3 ...   # list of coordinates for test case 2
 ...      # etc
 ```
 
 - Example input:
 ```
-1 1
-2 3
-3 1
-2 2
+1
+1 1 2 3 3 1 2 2
 ```
 - Example output:
 ```
-1 1
-2 3
-3 1
+1 1 2 3 3 1
 ```
