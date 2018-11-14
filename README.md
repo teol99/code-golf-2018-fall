@@ -92,7 +92,7 @@ Fork this GitHub repository, and just copy and paste your repository link [here]
 ```
 
 ### 3) k-th largest
-#### Given a list of numbers and an `k` such that `1 <= k <= length of list`, find the kth largest unique element. 
+#### Given a list of numbers and a `k` such that `1 <= k <= length of list`, find the kth largest unique element. 
 - Note the list may not be sorted and may have duplicates.
 
 - Input format:
@@ -128,28 +128,35 @@ k           # k
 ```
 
 ### 4) Unique names
-#### Given a list of names, print the longest set of names in which no name shares a character with any other name in the set at the same index. You can ignore case.
+#### Let us define `Person_A ~ Person_B` as true if `Person_A` and `Person_B` do not share a character at the same index. Given a list of names and a number k, print the names of the k people in which `Person ~ Other_Person` is true for the k highest number of `Other_Person`'s. If there are several people in which `Person ~ Other_People` is true for the same amount of `Other_People`, then list them in alphabetical order.
 
 - Input format:
 ```
-T         # number of test cases
-L         # list of names separated by spaces
+Name1
+Name2
+Name3
+...
+k
 ```
 - Output format:
 ```
-Name1 Name2 Name3 Name4          # List corresponding to the first test case
-OtherName1 OtherName2 OtherName3 # List corresponding to the second test case
-...
+Name1
+Name2
+Name3
+...        # a total of k names
 ```
 
 - Example input:
 ```
-1                # one test case
-Dan Dylan Wyatt  #
+Dan
+Dylan 
+Wyatt
+2
 ```
 - Example output:
 ```
-Dan Wyatt        #  Dan and Dylan both have 'd' at index 0, and Dylan and Wyatt both have 'y' at index 1, so {Dan, Wyatt} is the largest set that does not share characters at the same vertex
+Dan      # Dan shares no character with Wyatt; Dan and Wyatt both share no char with 1 other person, but Dan is first (alphabetical order)
+Wyatt    # Wyatt shares no character with Dan, but Dylan shares no character with no one else in the list
 ```
 
 ### 5) TN Universities
@@ -168,23 +175,29 @@ University of Memphis
 
 - Input format:
 ```
-T                     # number of test cases
-x1 y1 x2 y2 x3 y3 ... # list of coordinates
-...
+x1 y1    # coordinate 1
+x2 y2    # coordinate 2
+x3 y3    # coordinate 3
+...      # etc
 ```
 - Output format:
 ```
-x1 y1 x2 y2 x3 y3 ... # list of coordinates for test case 1
-x1 y1 x2 y2 x3 y3 ... # list of coordinates for test case 2
-...
+x1 y1    # coordinate 1
+x2 y2    # coordinate 2
+x3 y3    # coordinate 3
+...      # etc
 ```
 
 - Example input:
 ```
-1
-1 1 2 3 3 1 2 2
+1 1
+2 3
+3 1
+2 2
 ```
 - Example output:
 ```
-1 1 2 3 3 1
+1 1
+2 3
+3 1
 ```
